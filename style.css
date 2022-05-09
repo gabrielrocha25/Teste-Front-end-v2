@@ -131,7 +131,9 @@ html {
 }
 
 /* CART */
-
+.cart {
+  margin-top: 9px;
+}
 .cart a {
   text-decoration: none;
 }
