@@ -3,6 +3,7 @@
 html {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
+
 .top-nav {
   display: flex;
   justify-content: space-between;
@@ -27,12 +28,15 @@ html {
   transition: 100ms ease-in-out;
 }
 .main-nav {
-  justify-content: center;
+  justify-content: space-between;
   display: flex;
   flex-direction: row;
-  margin: 30px 0;
+  margin: 30px 12.5%;
   gap: 50px;
 }
+
+/* SEARCH */
+
 .search-bar {
   border: 2px solid var(--cor-3);
   border-radius: 5px;
@@ -52,9 +56,82 @@ html {
   height: 45px;
   border: none;
 }
+.search-bar button:hover {
+  cursor: pointer;
+}
+
+/* ENTRAR */
+
+.dropdown-menu {
+  display: flex;
+  width: 100px;
+  height: 50px;
+}
+.dropdown-menu h1 {
+  z-index: 1;
+  padding: 15px;
+  font-weight: bold;
+  font-size: var(--text-5);
+  background-image: url(assets/imgs/chevron-down-icon.svg);
+  background-repeat: no-repeat;
+  background-position-x: 68px;
+  background-position-y: 22px;
+}
+.dropdown-content::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: var(--cor-0);
+  transform: rotate(45deg);
+  border-top: 2px solid var(--cor-3);
+  border-left: 2px solid var(--cor-3);
+  position: relative;
+  top: -7px;
+  right: -112px;
+}
 .dropdown-content {
+  display: block;
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid var(--cor-3);
+  width: fit-content;
+  height: fit-content;
+  padding: 0 15px;
+  position: relative;
+  top: 35px;
+  right: 140px;
+  z-index: 2;
+  background-color: var(--cor-0);
   display: none;
 }
+.dropdown-content div {
+  list-style: none;
+  width: 120px;
+  height: 95px;
+}
+.dropdown-content div li {
+  margin-bottom: 15px;
+}
+.dropdown-content div li a {
+  font-size: var(--text-4);
+  color: var(--cor-4);
+  text-decoration: none;
+}
+.dropdown-content div li a b {
+  font-weight: bold;
+}
+.dropdown-menu:hover .dropdown-content {
+  display: block;
+  transition: 200ms ease-in-out;
+}
+.dropdown-content div li a:hover {
+  color: var(--cor-5);
+  transition: 200ms ease-in-out;
+}
+
+/* CART */
+
 .cart a {
   text-decoration: none;
 }
@@ -67,4 +144,5 @@ html {
   border-radius: 50%;
   color: var(--cor-1);
   background-color: var(--cor-4);
+  pointer-events: none;
 }
