@@ -3,36 +3,42 @@
 html {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
-
+.wrap {
+  display: flex;
+  justify-content: center;
+  max-width: 1000px;
+  width: 100%;
+}
 .top-nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   background-color: var(--cor-1);
   height: 32px;
 }
-.top-nav div {
-  margin: auto;
+.space-between {
+  margin-top: 10px;
+  justify-content: space-between;
+}
+.top-nav .wrap div {
   display: flex;
   flex-direction: row;
   list-style: none;
   gap: 60px;
   font-size: var(--text-1);
 }
-.top-nav div li a {
+.top-nav .wrap li a {
   text-decoration: none;
   color: var(--cor-4);
 }
-.top-nav div li a:hover,
-.top-nav div li a:focus {
+.top-nav .wrap li a:hover,
+.top-nav .wrap li a:focus {
   color: var(--cor-5);
   transition: 100ms ease-in-out;
 }
 .main-nav {
-  justify-content: space-between;
+  justify-content: center;
   display: flex;
   flex-direction: row;
-  margin: 30px 12.5%;
-  gap: 50px;
 }
 
 /* SEARCH */
